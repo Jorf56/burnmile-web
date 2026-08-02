@@ -11,6 +11,19 @@ images/logo.png → logo badge western (también se usa como favicon y como imag
 CNAME           → dominio personalizado para GitHub Pages
 ```
 
+## Colecciones
+
+Las tres colecciones de la web replican las **secciones de la tienda de Etsy**:
+
+| Web (`col`) | Sección de Etsy | ID de sección |
+|---|---|---|
+| `original` | The Original Collection | 59548122 |
+| `onset` | On Set Collection | 59656628 |
+| `audio` | Vintage Audio Collection | 59672817 |
+
+Si creas o renombras una sección en Etsy, hay que tocar tres sitios en `index.html`:
+el objeto `COL_LABEL`, los botones de `.filters` y las tarjetas de la sección `#collections`.
+
 ## Cómo añadir o cambiar un producto
 
 Todos los productos viven en un único array `PRODUCTS`, al final de `index.html`.
@@ -20,7 +33,8 @@ No hace falta tocar nada más:
 {
   name: "Nombre corto del diseño",
   desc: "Una frase de venta.",
-  col:  "analog",          // "analog" o "road" → controla el filtro y la etiqueta
+  col:  "onset",           // seccion de Etsy: "original" | "onset" | "audio"
+                           // controla el filtro y la etiqueta de la tarjeta
   url:  "https://www.etsy.com/listing/XXXXXXXX/slug",
   img:  "https://i.etsystatic.com/..."   // o "images/mi-foto.jpg"
 }

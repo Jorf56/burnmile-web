@@ -269,22 +269,28 @@
   <section class="collections" id="collections">
     <div class="wrap">
       <div class="sec-head">
-        <p class="label">Two roads</p>
-        <h2>One brand, two obsessions</h2>
+        <p class="label">Three roads</p>
+        <h2>One badge, three obsessions</h2>
         <p>Everything under the Burnmile badge starts the same way: a hand-drawn design, a limited palette, and something worth wearing more than once.</p>
       </div>
       <div class="col-grid">
         <div class="col-card">
           <p class="label">Collection 01</p>
-          <h3>Analog</h3>
-          <p>For the people behind the sound and the picture. Reel-to-reels, VU meters, ribbon mics and clapperboards — drawn with enough detail that the pros nod at it.</p>
-          <a href="#shop" data-jump="analog">Browse Analog →</a>
+          <h3>The Original Collection</h3>
+          <p>Where Burnmile started. Western badges, desert lines and long-haul spirit — made for the miles you take on purpose, not the ones you rush through.</p>
+          <a href="#shop" data-jump="original">Browse the originals →</a>
         </div>
         <div class="col-card">
           <p class="label">Collection 02</p>
-          <h3>Open Road</h3>
-          <p>Western badges, desert lines and long-haul spirit. Made for the miles you take on purpose, not the ones you rush through.</p>
-          <a href="#shop" data-jump="road">Browse Open Road →</a>
+          <h3>On Set Collection</h3>
+          <p>For the people who make the picture. Clapperboards, VU meters and set-floor humour, drawn with enough detail that the crew nods at it.</p>
+          <a href="#shop" data-jump="onset">Browse On Set →</a>
+        </div>
+        <div class="col-card">
+          <p class="label">Collection 03</p>
+          <h3>Vintage Audio Collection</h3>
+          <p>Reel-to-reels, ribbon mics and studio cans. Analog gear for analog souls — the sound side of the badge.</p>
+          <a href="#shop" data-jump="audio">Browse Vintage Audio →</a>
         </div>
       </div>
     </div>
@@ -301,8 +307,9 @@
 
       <div class="filters" role="group" aria-label="Filter products by collection">
         <button type="button" data-filter="all" aria-pressed="true">All</button>
-        <button type="button" data-filter="analog" aria-pressed="false">Analog</button>
-        <button type="button" data-filter="road" aria-pressed="false">Open Road</button>
+        <button type="button" data-filter="original" aria-pressed="false">The Original</button>
+        <button type="button" data-filter="onset" aria-pressed="false">On Set</button>
+        <button type="button" data-filter="audio" aria-pressed="false">Vintage Audio</button>
       </div>
 
       <div class="grid" id="product-grid"></div>
@@ -386,72 +393,83 @@
    prefer to self-host (drop the file in /images).
 ------------------------------------------------------------------ */
 const PRODUCTS = [
-  {
-    name: "Vintage Camera Tee",
-    desc: "Retro film camera badge for producers, engineers and podcast people.",
-    col: "analog",
-    url: "https://www.etsy.com/listing/4548576040/vintage-camera-shirt-retro-audio-tee",
-    img: "https://i.etsystatic.com/67009937/r/il/b82b7c/8377662011/il_794xN.8377662011_639s.jpg"
-  },
-  {
-    name: "Retro Microphone Tee",
-    desc: "Classic ribbon mic graphic on garment-dyed Comfort Colors.",
-    col: "analog",
-    url: "https://www.etsy.com/listing/4548522126/garment-dyed-t-shirt-retro-microphone",
-    img: "https://i.etsystatic.com/67009937/r/il/a12c2a/8377272069/il_794xN.8377272069_ixnn.jpg"
-  },
-  {
-    name: "Silence On Set",
-    desc: "For everyone who has ever said it twice. Heavyweight cotton.",
-    col: "analog",
-    url: "https://www.etsy.com/listing/4548501159/silence-on-set-microphone-graphic-tee",
-    img: "https://i.etsystatic.com/67009937/r/il/a53661/8377226557/il_794xN.8377226557_r01o.jpg"
-  },
-  {
-    name: "Keep It Out Of The Red",
-    desc: "Analog VU meter, red zone and all. A sound engineer's badge.",
-    col: "analog",
-    url: "https://www.etsy.com/listing/4548498965/keep-it-out-of-the-red-vu-meter-shirt",
-    img: "https://i.etsystatic.com/67009937/r/il/646351/8377209317/il_794xN.8377209317_gp1k.jpg"
-  },
-  {
-    name: "Retro Headphones Tee",
-    desc: "Studio cans and tape spirit for the recording crowd.",
-    col: "analog",
-    url: "https://www.etsy.com/listing/4548512900/retro-headphones-t-shirt-vintage-audio",
-    img: "https://i.etsystatic.com/67009937/r/il/3ae9af/8377200361/il_794xN.8377200361_e576.jpg"
-  },
+  /* ---- The Original Collection (seccion Etsy 59548122) ---- */
   {
     name: "Western Badge Tee",
     desc: "Vintage western graphic — rodeo, desert and long-haul country.",
-    col: "road",
+    col: "original",
     url: "https://www.etsy.com/listing/4548500137/unisex-garment-dyed-t-shirt-western",
     img: "https://i.etsystatic.com/67009937/r/il/4e56af/8377218367/il_794xN.8377218367_br5z.jpg"
   },
   {
     name: "Vintage Western Tee",
     desc: "Garment-dyed western graphic with worn-in screen print feel.",
-    col: "road",
+    col: "original",
     url: "https://www.etsy.com/listing/4544252069/garment-dyed-western-graphic-tee-comfort",
     img: "https://i.etsystatic.com/67009937/r/il/847bbb/8347143891/il_794xN.8347143891_t4sn.jpg"
   },
   {
+    name: "Garment-Dyed Tank Top",
+    desc: "Unisex tank for hot miles. Same soft garment-dyed cotton.",
+    col: "original",
+    url: "https://www.etsy.com/listing/4544266514/unisex-garment-dyed-tank-top",
+    img: "https://i.etsystatic.com/67009937/r/il/d8a854/8347128153/il_794xN.8347128153_uvap.jpg"
+  },
+
+  /* ---- On Set Collection (seccion Etsy 59656628) ---- */
+  {
+    name: "Keep It Out Of The Red",
+    desc: "Analog VU meter, red zone and all. A sound engineer's badge.",
+    col: "onset",
+    url: "https://www.etsy.com/listing/4548498965/keep-it-out-of-the-red-vu-meter-shirt",
+    img: "https://i.etsystatic.com/67009937/r/il/646351/8377209317/il_794xN.8377209317_gp1k.jpg"
+  },
+  {
+    name: "Retro Headphones Tee",
+    desc: "Studio cans and tape spirit for the recording crowd.",
+    col: "onset",
+    url: "https://www.etsy.com/listing/4548512900/retro-headphones-t-shirt-vintage-audio",
+    img: "https://i.etsystatic.com/67009937/r/il/3ae9af/8377200361/il_794xN.8377200361_e576.jpg"
+  },
+  {
     name: "Country Road Tee",
     desc: "Comfort Colors western country graphic, built for the miles.",
-    col: "road",
+    col: "onset",
     url: "https://www.etsy.com/listing/4544268026/garment-dyed-western-graphic-tee-comfort",
     img: "https://i.etsystatic.com/67009937/r/il/ab3d9b/8329286322/il_794xN.8329286322_2stg.jpg"
   },
   {
-    name: "Garment-Dyed Tank Top",
-    desc: "Unisex tank for hot miles. Same soft garment-dyed cotton.",
-    col: "road",
-    url: "https://www.etsy.com/listing/4544266514/unisex-garment-dyed-tank-top",
-    img: "https://i.etsystatic.com/67009937/r/il/d8a854/8347128153/il_794xN.8347128153_uvap.jpg"
+    /* OJO: en Etsy este listing no esta asignado a ninguna seccion.
+       Aqui va en On Set por el nombre. Asignalo tambien en Etsy. */
+    name: "Silence On Set",
+    desc: "For everyone who has ever said it twice. Heavyweight cotton.",
+    col: "onset",
+    url: "https://www.etsy.com/listing/4548501159/silence-on-set-microphone-graphic-tee",
+    img: "https://i.etsystatic.com/67009937/r/il/a53661/8377226557/il_794xN.8377226557_r01o.jpg"
+  },
+
+  /* ---- Vintage Audio Collection (seccion Etsy 59672817) ---- */
+  {
+    name: "Vintage Camera Tee",
+    desc: "Retro film camera badge for producers, engineers and podcast people.",
+    col: "audio",
+    url: "https://www.etsy.com/listing/4548576040/vintage-camera-shirt-retro-audio-tee",
+    img: "https://i.etsystatic.com/67009937/r/il/b82b7c/8377662011/il_794xN.8377662011_639s.jpg"
+  },
+  {
+    name: "Retro Microphone Tee",
+    desc: "Classic ribbon mic graphic on garment-dyed Comfort Colors.",
+    col: "audio",
+    url: "https://www.etsy.com/listing/4548522126/garment-dyed-t-shirt-retro-microphone",
+    img: "https://i.etsystatic.com/67009937/r/il/a12c2a/8377272069/il_794xN.8377272069_ixnn.jpg"
   }
 ];
 
-const COL_LABEL = { analog: "Analog Collection", road: "Open Road" };
+const COL_LABEL = {
+  original: "The Original Collection",
+  onset:    "On Set Collection",
+  audio:    "Vintage Audio Collection"
+};
 const grid = document.getElementById('product-grid');
 
 function render(filter = 'all') {
