@@ -44,12 +44,10 @@ En github.com → **New repository** → nombre `burnmile-web` → **Public** �
 
 ### 2. Subir los archivos
 
-Desde esta carpeta:
+El repositorio local ya está creado y con el primer commit hecho.
+Solo falta conectarlo con GitHub y empujar (cambia `TU-USUARIO`):
 
 ```bash
-git init -b main
-git add .
-git commit -m "Landing page de Burnmile"
 git remote add origin https://github.com/TU-USUARIO/burnmile-web.git
 git push -u origin main
 ```
