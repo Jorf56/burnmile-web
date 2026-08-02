@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Burnmile Clothing Co. — Vintage-Inspired Tees, Designed in Spain, Printed in the USA</title>
+<meta name="description" content="Burnmile Clothing Co. Vintage-inspired graphic tees for analog souls and open-road riders. Garment-dyed Comfort Colors, printed in the USA. Take the long way.">
+<link rel="canonical" href="https://burnmile.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Burnmile Clothing Co.">
+<meta property="og:title" content="Burnmile Clothing Co. — Take the long way">
+<meta property="og:description" content="Vintage-inspired graphic tees for analog souls and open-road riders. Garment-dyed Comfort Colors, printed in the USA.">
+<meta property="og:url" content="https://burnmile.com/">
+<meta property="og:image" content="https://burnmile.com/images/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Oswald:wght@400;600&family=Barlow:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --charcoal:#191715;
+    --charcoal-2:#22201d;
+    --cream:#F2E4CE;
+    --tan:#E8BC7E;
+    --orange:#C4551F;
+    --orange-lt:#E0762F;
+    --muted:#a2988a;
+    --maxw:1140px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--charcoal);
+    color:var(--cream);
+    font-family:'Barlow',system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  .display{font-family:'Alfa Slab One',Georgia,serif;font-weight:400;letter-spacing:.01em;line-height:1.05}
+  .label{font-family:'Oswald',Impact,sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;color:var(--orange-lt)}
+
+  /* ---------- grain overlay ---------- */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(25,23,21,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(242,228,206,.12);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+  .nav-brand{font-family:'Alfa Slab One',serif;font-size:1.2rem;letter-spacing:.04em;text-decoration:none}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;
+    font-size:.8rem;text-decoration:none;color:var(--cream);opacity:.8;transition:opacity .2s,color .2s;
+  }
+  .nav-links a:hover{opacity:1;color:var(--tan)}
+  .nav-links .btn-sm{
+    background:var(--orange);color:#fff;opacity:1;padding:9px 16px;border-radius:2px;
+  }
+  .nav-links .btn-sm:hover{background:var(--orange-lt);color:#fff}
+  @media(max-width:720px){.nav-links a:not(.btn-sm){display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;text-align:center;padding:76px 0 64px;
+    background:
+      radial-gradient(900px 520px at 50% 8%, rgba(196,85,31,.20), transparent 62%),
+      var(--charcoal);
+    border-bottom:1px solid rgba(242,228,206,.12);
+  }
+  .medallion{
+    width:min(300px,66vw);aspect-ratio:1;margin:0 auto 30px;border-radius:50%;overflow:hidden;
+    box-shadow:0 0 0 8px var(--charcoal-2), 0 0 0 9px rgba(242,228,206,.22), 0 22px 60px rgba(0,0,0,.6);
+  }
+  .medallion img{width:100%;height:100%;object-fit:cover}
+  .hero h1{
+    font-family:'Alfa Slab One',serif;font-weight:400;
+    font-size:clamp(2.4rem,8.5vw,5rem);margin:0;line-height:1;letter-spacing:.01em;
+  }
+  .hero .kicker{margin:0 0 18px}
+  .hero .tagline{
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.34em;
+    font-size:clamp(.8rem,2.4vw,1.05rem);color:var(--tan);margin:20px 0 0;
+  }
+  .hero p.lede{max-width:600px;margin:22px auto 0;color:#d8cbb8}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+
+  .btn{
+    display:inline-block;text-decoration:none;
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:.85rem;
+    padding:15px 32px;border-radius:2px;border:2px solid transparent;transition:.2s;
+  }
+  .btn-primary{background:var(--orange);color:#fff;border-color:var(--orange)}
+  .btn-primary:hover{background:var(--orange-lt);border-color:var(--orange-lt)}
+  .btn-ghost{border-color:rgba(242,228,206,.35);color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--cream);background:rgba(242,228,206,.07)}
+
+  /* ---------- marquee strip ---------- */
+  .strip{background:var(--orange);color:#fff;overflow:hidden;padding:13px 0;white-space:nowrap}
+  .strip-track{display:inline-block;animation:slide 34s linear infinite}
+  .strip span{
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;padding:0 24px;
+  }
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.strip-track{animation:none}}
+
+  /* ---------- sections ---------- */
+  section{padding:86px 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 52px}
+  .sec-head h2{font-family:'Alfa Slab One',serif;font-weight:400;font-size:clamp(1.8rem,4.6vw,2.7rem);margin:10px 0 14px;line-height:1.1}
+  .sec-head p{color:#c3b7a5;margin:0}
+
+  /* ---------- collections ---------- */
+  .collections{background:var(--charcoal-2);border-block:1px solid rgba(242,228,206,.1)}
+  .col-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+  .col-card{
+    border:1px solid rgba(242,228,206,.16);padding:38px 32px;border-radius:3px;
+    background:linear-gradient(180deg, rgba(242,228,206,.05), transparent);
+  }
+  .col-card h3{font-family:'Alfa Slab One',serif;font-weight:400;font-size:1.55rem;margin:8px 0 12px}
+  .col-card p{color:#c3b7a5;margin:0 0 20px}
+  .col-card a{
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;
+    color:var(--tan);text-decoration:none;border-bottom:1px solid rgba(232,188,126,.45);padding-bottom:3px;
+  }
+  .col-card a:hover{color:#fff;border-color:#fff}
+
+  /* ---------- products ---------- */
+  .filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+  .filters button{
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;
+    background:transparent;color:var(--cream);border:1px solid rgba(242,228,206,.3);
+    padding:11px 22px;border-radius:2px;cursor:pointer;transition:.2s;
+  }
+  .filters button:hover{border-color:var(--cream)}
+  .filters button[aria-pressed="true"]{background:var(--cream);color:var(--charcoal);border-color:var(--cream)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:28px}
+  .card{
+    text-decoration:none;display:flex;flex-direction:column;
+    background:var(--charcoal-2);border:1px solid rgba(242,228,206,.12);
+    border-radius:3px;overflow:hidden;transition:transform .25s, border-color .25s;
+  }
+  .card:hover{transform:translateY(-5px);border-color:rgba(232,188,126,.55)}
+  .card .thumb{aspect-ratio:1;background:#2c2925;overflow:hidden}
+  .card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .card:hover .thumb img{transform:scale(1.04)}
+  .card .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .card .tag{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:.66rem;color:var(--orange-lt)}
+  .card h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.02rem;margin:0;letter-spacing:.02em;line-height:1.3}
+  .card .desc{font-size:.9rem;color:#a99e8f;margin:0;flex:1}
+  .card .go{
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;
+    color:var(--tan);margin-top:6px;
+  }
+  .shop-all{text-align:center;margin-top:52px}
+
+  /* ---------- story ---------- */
+  .story{background:var(--charcoal-2);border-block:1px solid rgba(242,228,206,.1)}
+  .story-in{max-width:760px;margin:0 auto;text-align:center}
+  .story-in h2{font-family:'Alfa Slab One',serif;font-weight:400;font-size:clamp(1.8rem,4.6vw,2.7rem);margin:10px 0 22px;line-height:1.15}
+  .story-in p{color:#c9bdab;margin:0 0 18px}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;margin-top:52px;text-align:center}
+  .fact .n{font-family:'Alfa Slab One',serif;font-size:1.5rem;color:var(--tan)}
+  .fact .t{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:#a99e8f;margin-top:6px}
+
+  /* ---------- final cta ---------- */
+  .final{text-align:center;background:
+      radial-gradient(700px 400px at 50% 100%, rgba(196,85,31,.22), transparent 65%), var(--charcoal)}
+  .final h2{font-family:'Alfa Slab One',serif;font-weight:400;font-size:clamp(2rem,6vw,3.4rem);margin:14px 0 18px;line-height:1.05}
+  .final p{color:#c3b7a5;max-width:520px;margin:0 auto 34px}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid rgba(242,228,206,.14);padding:52px 0 42px;text-align:center}
+  .f-logo{width:76px;margin:0 auto 22px;border-radius:50%;overflow:hidden;opacity:.9}
+  .f-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+  .f-links a{
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;
+    text-decoration:none;color:var(--cream);opacity:.75;transition:.2s;
+  }
+  .f-links a:hover{opacity:1;color:var(--tan)}
+  footer small{display:block;color:#7d7468;font-size:.78rem;line-height:1.9}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="nav-brand">BURNMILE</a>
+    <nav class="nav-links">
+      <a href="#collections">Collections</a>
+      <a href="#shop">Shop</a>
+      <a href="#story">Our Story</a>
+      <a class="btn-sm" href="https://www.etsy.com/shop/Burnmile" target="_blank" rel="noopener">Etsy Store</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="medallion">
+        <img src="images/logo.png" alt="Burnmile Clothing Co. — western badge logo, established 2026" width="800" height="800">
+      </div>
+      <p class="label kicker">Clothing Co. &nbsp;·&nbsp; Est. 2026</p>
+      <h1>BURNMILE</h1>
+      <p class="tagline">Take the long way</p>
+      <p class="lede">
+        Vintage-inspired graphic tees for analog souls and open-road riders.
+        Drawn by hand in Spain, printed on garment-dyed Comfort Colors in the USA.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.etsy.com/shop/Burnmile" target="_blank" rel="noopener">Shop on Etsy</a>
+        <a class="btn btn-ghost" href="#shop">See the tees</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track">
+      <span>Comfort Colors® Garment-Dyed</span><span>★</span>
+      <span>Printed in the USA</span><span>★</span>
+      <span>Free US Shipping</span><span>★</span>
+      <span>Original Designs</span><span>★</span>
+      <span>Built to Last</span><span>★</span>
+      <span>Comfort Colors® Garment-Dyed</span><span>★</span>
+      <span>Printed in the USA</span><span>★</span>
+      <span>Free US Shipping</span><span>★</span>
+      <span>Original Designs</span><span>★</span>
+      <span>Built to Last</span><span>★</span>
+    </div>
+  </div>
+
+  <!-- COLLECTIONS -->
+  <section class="collections" id="collections">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Two roads</p>
+        <h2>One brand, two obsessions</h2>
+        <p>Everything under the Burnmile badge starts the same way: a hand-drawn design, a limited palette, and something worth wearing more than once.</p>
+      </div>
+      <div class="col-grid">
+        <div class="col-card">
+          <p class="label">Collection 01</p>
+          <h3>Analog</h3>
+          <p>For the people behind the sound and the picture. Reel-to-reels, VU meters, ribbon mics and clapperboards — drawn with enough detail that the pros nod at it.</p>
+          <a href="#shop" data-jump="analog">Browse Analog →</a>
+        </div>
+        <div class="col-card">
+          <p class="label">Collection 02</p>
+          <h3>Open Road</h3>
+          <p>Western badges, desert lines and long-haul spirit. Made for the miles you take on purpose, not the ones you rush through.</p>
+          <a href="#shop" data-jump="road">Browse Open Road →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section id="shop">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">The collection</p>
+        <h2>Wear the mile</h2>
+        <p>Every tee is printed to order on heavyweight garment-dyed cotton and shipped from the USA. From $25.99 with free US shipping.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter products by collection">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="analog" aria-pressed="false">Analog</button>
+        <button type="button" data-filter="road" aria-pressed="false">Open Road</button>
+      </div>
+
+      <div class="grid" id="product-grid"></div>
+
+      <div class="shop-all">
+        <a class="btn btn-primary" href="https://www.etsy.com/shop/Burnmile" target="_blank" rel="noopener">See all on Etsy</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story" id="story">
+    <div class="wrap story-in">
+      <p class="label">An ocean away, a mile away</p>
+      <h2>Designed in Spain.<br>Dreamed in America.</h2>
+      <p>
+        Hi from Spain — I'm Jordi. I grew up hooked on American road culture, spent years
+        with a bike under me, and never stopped believing the best things are the ones built to last.
+      </p>
+      <p>
+        Burnmile came out of that: vintage-inspired designs for people who enjoy the road without
+        the hurry. Every graphic is created by me here in Spain and printed on premium Comfort Colors
+        garments in the United States, so orders reach you fast and feel right out of the box.
+      </p>
+      <p><em>Designed in Spain with a passion for the road. Printed in the USA.</em></p>
+
+      <div class="facts">
+        <div class="fact"><div class="n">Comfort Colors®</div><div class="t">Garment-dyed blanks</div></div>
+        <div class="fact"><div class="n">USA</div><div class="t">Printed &amp; shipped</div></div>
+        <div class="fact"><div class="n">Est. 2026</div><div class="t">Independent &amp; small</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <p class="label">Burn the mile, not the hurry</p>
+      <h2>Find your tee</h2>
+      <p>The full Burnmile collection lives on Etsy — sizes, colorways and secure checkout.</p>
+      <a class="btn btn-primary" href="https://www.etsy.com/shop/Burnmile" target="_blank" rel="noopener">Shop the Etsy store</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-logo"><img src="images/logo.png" alt=""></div>
+    <div class="f-links">
+      <a href="https://www.etsy.com/shop/Burnmile" target="_blank" rel="noopener">Etsy</a>
+      <a href="mailto:hello@burnmile.com">hello@burnmile.com</a>
+      <a href="#collections">Collections</a>
+      <a href="#story">Our Story</a>
+    </div>
+    <small>
+      © <span id="year">2026</span> Burnmile Clothing Co. — Take the long way.<br>
+      Designed in Spain · Printed in the USA. Comfort Colors® is a registered trademark of its respective owner.
+    </small>
+  </div>
+</footer>
+
+<script>
+/* ------------------------------------------------------------------
+   PRODUCTS — single source of truth.
+   To add/remove a tee: edit this array only.
+   `img`: Etsy hosts the image. Swap for "images/xxx.jpg" if you
+   prefer to self-host (drop the file in /images).
+------------------------------------------------------------------ */
+const PRODUCTS = [
+  {
+    name: "Vintage Camera Tee",
+    desc: "Retro film camera badge for producers, engineers and podcast people.",
+    col: "analog",
+    url: "https://www.etsy.com/listing/4548576040/vintage-camera-shirt-retro-audio-tee",
+    img: "https://i.etsystatic.com/67009937/r/il/b82b7c/8377662011/il_794xN.8377662011_639s.jpg"
+  },
+  {
+    name: "Retro Microphone Tee",
+    desc: "Classic ribbon mic graphic on garment-dyed Comfort Colors.",
+    col: "analog",
+    url: "https://www.etsy.com/listing/4548522126/garment-dyed-t-shirt-retro-microphone",
+    img: "https://i.etsystatic.com/67009937/r/il/a12c2a/8377272069/il_794xN.8377272069_ixnn.jpg"
+  },
+  {
+    name: "Silence On Set",
+    desc: "For everyone who has ever said it twice. Heavyweight cotton.",
+    col: "analog",
+    url: "https://www.etsy.com/listing/4548501159/silence-on-set-microphone-graphic-tee",
+    img: "https://i.etsystatic.com/67009937/r/il/a53661/8377226557/il_794xN.8377226557_r01o.jpg"
+  },
+  {
+    name: "Keep It Out Of The Red",
+    desc: "Analog VU meter, red zone and all. A sound engineer's badge.",
+    col: "analog",
+    url: "https://www.etsy.com/listing/4548498965/keep-it-out-of-the-red-vu-meter-shirt",
+    img: "https://i.etsystatic.com/67009937/r/il/646351/8377209317/il_794xN.8377209317_gp1k.jpg"
+  },
+  {
+    name: "Retro Headphones Tee",
+    desc: "Studio cans and tape spirit for the recording crowd.",
+    col: "analog",
+    url: "https://www.etsy.com/listing/4548512900/retro-headphones-t-shirt-vintage-audio",
+    img: "https://i.etsystatic.com/67009937/r/il/3ae9af/8377200361/il_794xN.8377200361_e576.jpg"
+  },
+  {
+    name: "Western Badge Tee",
+    desc: "Vintage western graphic — rodeo, desert and long-haul country.",
+    col: "road",
+    url: "https://www.etsy.com/listing/4548500137/unisex-garment-dyed-t-shirt-western",
+    img: "https://i.etsystatic.com/67009937/r/il/4e56af/8377218367/il_794xN.8377218367_br5z.jpg"
+  },
+  {
+    name: "Vintage Western Tee",
+    desc: "Garment-dyed western graphic with worn-in screen print feel.",
+    col: "road",
+    url: "https://www.etsy.com/listing/4544252069/garment-dyed-western-graphic-tee-comfort",
+    img: "https://i.etsystatic.com/67009937/r/il/847bbb/8347143891/il_794xN.8347143891_t4sn.jpg"
+  },
+  {
+    name: "Country Road Tee",
+    desc: "Comfort Colors western country graphic, built for the miles.",
+    col: "road",
+    url: "https://www.etsy.com/listing/4544268026/garment-dyed-western-graphic-tee-comfort",
+    img: "https://i.etsystatic.com/67009937/r/il/ab3d9b/8329286322/il_794xN.8329286322_2stg.jpg"
+  },
+  {
+    name: "Garment-Dyed Tank Top",
+    desc: "Unisex tank for hot miles. Same soft garment-dyed cotton.",
+    col: "road",
+    url: "https://www.etsy.com/listing/4544266514/unisex-garment-dyed-tank-top",
+    img: "https://i.etsystatic.com/67009937/r/il/d8a854/8347128153/il_794xN.8347128153_uvap.jpg"
+  }
+];
+
+const COL_LABEL = { analog: "Analog Collection", road: "Open Road" };
+const grid = document.getElementById('product-grid');
+
+function render(filter = 'all') {
+  grid.innerHTML = '';
+  PRODUCTS
+    .filter(p => filter === 'all' || p.col === filter)
+    .forEach(p => {
+      const a = document.createElement('a');
+      a.className = 'card';
+      a.href = p.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = `
+        <div class="thumb"><img src="${p.img}" alt="${p.name} — Burnmile Clothing Co." loading="lazy"></div>
+        <div class="body">
+          <span class="tag">${COL_LABEL[p.col]}</span>
+          <h3>${p.name}</h3>
+          <p class="desc">${p.desc}</p>
+          <span class="go">View on Etsy →</span>
+        </div>`;
+      grid.appendChild(a);
+    });
+}
+
+document.querySelectorAll('.filters button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filters button')
+      .forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+    render(btn.dataset.filter);
+  });
+});
+
+document.querySelectorAll('[data-jump]').forEach(link => {
+  link.addEventListener('click', () => {
+    const target = document.querySelector(`.filters button[data-filter="${link.dataset.jump}"]`);
+    if (target) target.click();
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+render();
+</script>
+
+</body>
+</html>
