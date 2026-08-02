@@ -45,10 +45,10 @@ En github.com → **New repository** → nombre `burnmile-web` → **Public** �
 ### 2. Subir los archivos
 
 El repositorio local ya está creado y con el primer commit hecho.
-Solo falta conectarlo con GitHub y empujar (cambia `TU-USUARIO`):
+Solo falta conectarlo con GitHub y empujar (cambia `jorf56`):
 
 ```bash
-git remote add origin https://github.com/TU-USUARIO/burnmile-web.git
+git remote add origin https://github.com/jorf56/burnmile-web.git
 git push -u origin main
 ```
 
@@ -58,7 +58,7 @@ Repositorio → **Settings** → **Pages**
 → *Source*: **Deploy from a branch**
 → *Branch*: `main`, carpeta `/ (root)` → **Save**
 
-En 1-2 minutos la web está en `https://TU-USUARIO.github.io/burnmile-web/`.
+En 1-2 minutos la web está en `https://jorf56.github.io/burnmile-web/`.
 
 ### 4. Conectar burnmile.com
 
@@ -75,7 +75,7 @@ En **Namecheap** → dominio `burnmile.com` → pestaña **Advanced DNS**:
    | A Record | @ | 185.199.110.153 |
    | A Record | @ | 185.199.111.153 |
 
-3. Añade un **CNAME Record**: Host `www` → Value `TU-USUARIO.github.io.`
+3. Añade un **CNAME Record**: Host `www` → Value `jorf56.github.io.`
 
 Después, en GitHub → **Settings → Pages → Custom domain**: escribe `burnmile.com` y guarda.
 Espera a que aparezca el check verde de verificación DNS (de minutos a 24 h) y entonces
